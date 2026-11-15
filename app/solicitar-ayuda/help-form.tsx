@@ -3,6 +3,7 @@
 import { useActionState } from "react"
 import { submitHelpForm, type HelpFormState } from "./actions"
 import { FormSuccess } from "@/components/form-success"
+import { PrivacyNotice } from "@/components/privacy-notice"
 
 const initialState: HelpFormState = { status: "idle" }
 
@@ -127,6 +128,8 @@ export function HelpForm() {
             placeholder="Cualquier información que nos ayude a entender mejor tu situación"
           />
         </div>
+
+        <PrivacyNotice />
 
         <button type="submit" disabled={isPending} className="btn-refood w-full justify-center disabled:opacity-60">
           {isPending ? "Enviando..." : "Enviar solicitud"}

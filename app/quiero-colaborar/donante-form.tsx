@@ -3,6 +3,7 @@
 import { useActionState } from "react"
 import { submitDonanteForm, type DonanteFormState } from "./actions"
 import { FormSuccess } from "@/components/form-success"
+import { PrivacyNotice } from "@/components/privacy-notice"
 
 const initialState: DonanteFormState = { status: "idle" }
 
@@ -165,6 +166,8 @@ export function DonanteForm() {
             placeholder="¿Qué tipo de productos sueles tener de excedente?"
           />
         </div>
+
+        <PrivacyNotice />
 
         <button type="submit" disabled={isPending} className="btn-refood w-full justify-center disabled:opacity-60">
           {isPending ? "Enviando..." : "Enviar solicitud"}

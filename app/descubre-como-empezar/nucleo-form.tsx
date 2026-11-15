@@ -3,6 +3,7 @@
 import { useActionState } from "react"
 import { submitNucleoForm, type NucleoFormState } from "./actions"
 import { FormSuccess } from "@/components/form-success"
+import { PrivacyNotice } from "@/components/privacy-notice"
 
 const initialState: NucleoFormState = { status: "idle" }
 
@@ -104,6 +105,8 @@ export function NucleoForm() {
             placeholder="¿Ya tienes un grupo de voluntarios? ¿Has hablado con algún comercio? ¿Dispones de un local?"
           />
         </div>
+
+        <PrivacyNotice />
 
         <button type="submit" disabled={isPending} className="btn-refood w-full justify-center disabled:opacity-60">
           {isPending ? "Enviando..." : "Enviar solicitud"}

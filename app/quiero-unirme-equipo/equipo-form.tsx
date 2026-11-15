@@ -2,6 +2,7 @@
 
 import { useActionState } from "react"
 import { submitEquipoForm, type EquipoFormState } from "./actions"
+import { PrivacyNotice } from "@/components/privacy-notice"
 import { FormSuccess } from "@/components/form-success"
 
 const initialState: EquipoFormState = { status: "idle" }
@@ -107,6 +108,8 @@ export function EquipoForm() {
             placeholder="Cuéntanos qué te motiva a formar parte del equipo de gestión"
           />
         </div>
+
+        <PrivacyNotice />
 
         <button type="submit" disabled={isPending} className="btn-refood w-full justify-center disabled:opacity-60">
           {isPending ? "Enviando..." : "Enviar solicitud"}

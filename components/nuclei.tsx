@@ -13,19 +13,19 @@ const nuclei = [
     schedule: "Lunes a jueves",
     stats: { establishments: "26", families: "40", volunteers: "50+" },
     image:
-      "/images/nucleo-tetuan.jpg",
+      "/images/tetuan-local.jpg",
   },
   {
     name: "Pan Bendito",
     slug: "pan-bendito",
     year: "2022",
     description:
-      "Núcleo en Carabanchel. La prueba de que el modelo funciona y se puede replicar en cualquier barrio con ganas de organizarse.",
+      "Núcleo en Carabanchel impulsado por vecinas y vecinos del barrio. Las familias participan activamente en el rescate y el reparto: aquí todas somos voluntarias.",
     address: "C/ Álvarez Abellán, 37, 28025 Madrid",
-    schedule: "2 días por semana",
-    stats: { establishments: "4", families: "16", volunteers: "28" },
+    schedule: "Martes y jueves",
+    stats: { establishments: "6", families: "20", volunteers: "25" },
     image:
-      "/images/nucleo-pan-bendito.jpg",
+      "/images/pan-bendito-reparto.jpg",
   },
 ]
 
