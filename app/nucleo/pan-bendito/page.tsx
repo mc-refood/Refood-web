@@ -1,6 +1,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, MapPin, Clock, Calendar, Users, Store, Heart, ArrowRight } from "lucide-react"
+const donors = [
+  { name: "Centro de Mayores La Rosaleda", type: "Centro de mayores" },
+  { name: "Colegio Escolapias Carabanchel", type: "Colegio" },
+  { name: "Colegio Santa Beatriz de Silva", type: "Colegio" },
+  { name: "Colegio Vedruna Carabanchel", type: "Colegio" },
+  { name: "Colegio Salesianos", type: "Colegio" },
+]
+
 export default function NucleoPanBenditoPage() {
   return (
     <main className="min-h-screen bg-background">
@@ -63,9 +71,19 @@ export default function NucleoPanBenditoPage() {
               
               <div className="prose prose-lg max-w-none">
                 <p className="text-foreground/70 mb-6 normal-case text-lg">
-                  Pan Bendito es un barrio del distrito de Carabanchel, en el sur de Madrid, 
-                  con una fuerte identidad vecinal y una larga tradición de solidaridad y 
-                  organización comunitaria.
+                  ReFood trabaja de forma microlocal: cada núcleo nace en un barrio concreto y 
+                  funciona gracias a sus propios vecinos y vecinas. La comida que sobra en los 
+                  colegios, comercios y entidades del barrio se rescata y se reparte entre las 
+                  familias que viven a pocas calles, de modo que todo queda en la comunidad.
+                </p>
+
+                <p className="text-foreground/70 mb-6 normal-case">
+                  Cada núcleo es autónomo bajo el paraguas de ReFood España y se apoya en tres 
+                  principios: evitar el desperdicio de alimentos, ayudar a quien lo necesita y 
+                  fortalecer los lazos entre las personas del barrio. Pan Bendito, en el distrito 
+                  de Carabanchel, al sur de Madrid, con una fuerte identidad vecinal y una larga 
+                  tradición de organización comunitaria, era el lugar idóneo para el segundo 
+                  núcleo en España tras Tetuán.
                 </p>
 
                 <div className="my-8 p-6 bg-primary/10 border-l-4 border-primary">
@@ -76,14 +94,6 @@ export default function NucleoPanBenditoPage() {
                     Refood Pan Bendito en septiembre de 2022.
                   </p>
                 </div>
-
-                <p className="text-foreground/70 mb-6 normal-case">
-                  ReFood trabaja de forma microlocal: los procedimientos están estandarizados 
-                  y cada núcleo es totalmente autónomo bajo el paraguas de ReFood España. Así 
-                  nació Pan Bendito, el segundo núcleo en España tras Tetuán.
-                </p>
-
-                <h3 className="text-foreground mb-4 mt-8">Los primeros pasos</h3>
 
                 <p className="text-foreground/70 mb-6 normal-case">
                   El centro de mayores <strong>La Rosaleda</strong> se ofreció a colaborar desde 
@@ -107,76 +117,6 @@ export default function NucleoPanBenditoPage() {
                   catering El Sitio de tu Recreo, el Colegio Santa Beatriz de Silva y el 
                   Colegio Escolapias Carabanchel.
                 </p>
-              </div>
-
-              {/* How it works */}
-              <div className="mt-12">
-                <h3 className="text-foreground mb-6">¿Cómo funcionamos?</h3>
-                <div className="grid sm:grid-cols-3 gap-4">
-                  <div className="p-6 bg-muted">
-                    <span className="label-text text-primary block mb-2">1. Rescate</span>
-                    <p className="text-foreground/70 text-sm normal-case mb-0">
-                      Martes y jueves de 15:00 a 16:00, seis rutas recogen la comida sobrante de 
-                      colegios y centros de mayores. Se registra procedencia, tipo, cantidad y 
-                      alérgenos, y se mantiene refrigerada o congelada.
-                    </p>
-                  </div>
-                  <div className="p-6 bg-muted">
-                    <span className="label-text text-primary block mb-2">2. Local</span>
-                    <p className="text-foreground/70 text-sm normal-case mb-0">
-                      Los martes de 18:30 a 20:00 un equipo de 9 a 11 personas redistribuye la 
-                      comida rescatada entre las familias y registra su trazabilidad.
-                    </p>
-                  </div>
-                  <div className="p-6 bg-muted">
-                    <span className="label-text text-primary block mb-2">3. Recogida</span>
-                    <p className="text-foreground/70 text-sm normal-case mb-0">
-                      Las familias traen los tuppers limpios de la semana anterior y se llevan 
-                      los nuevos con comida a casa.
-                    </p>
-                  </div>
-                </div>
-                <p className="text-foreground/70 mt-6 normal-case">
-                  Donantes actuales: Colegio Escolapias, Colegio Santa Beatriz de Silva, 
-                  Colegio Vedruna Carabanchel, Centro de Mayores La Rosaleda y Colegio Salesianos.
-                </p>
-              </div>
-
-              {/* Growth Vision */}
-              <div className="mt-12 p-8 bg-foreground text-background">
-                <h3 className="text-primary mb-4">Un núcleo en crecimiento</h3>
-                <p className="text-background/80 normal-case mb-6">
-                  Hoy rescatamos entre 80 y 100 kg de alimentos cada semana. Nuestros retos: 
-                  sumar donantes de fruta y verdura fresca, lograr una financiación estable y 
-                  llegar a más familias y personas voluntarias del barrio.
-                </p>
-                <p className="text-background/80 normal-case mb-0">
-                  Si vives o trabajas en Pan Bendito, Carabanchel o alrededores, te invitamos 
-                  a conocernos y formar parte de este proyecto. Cada persona suma.
-                </p>
-              </div>
-
-              {/* Gallery */}
-              <div className="mt-12">
-                <h3 className="text-foreground mb-6">El día a día</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-video relative overflow-hidden">
-                    <Image
-                      src="/images/pan-bendito-reparto.jpg"
-                      alt="Tuppers con comida rescatada preparados con el nombre de cada familia en el local de Pan Bendito"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="aspect-video relative overflow-hidden">
-                    <Image
-                      src="/images/pan-bendito-dia-2.jpg"
-                      alt="Equipo de voluntarios"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
               </div>
 
               {/* Timeline */}
@@ -215,6 +155,56 @@ export default function NucleoPanBenditoPage() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Gallery */}
+              <div className="mt-12">
+                <h3 className="text-foreground mb-6">El día a día</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="col-span-2 aspect-video relative overflow-hidden">
+                    <Image
+                      src="/images/pan-bendito-voluntarias.jpg"
+                      alt="Dos voluntarias con delantal y gorro junto a los tuppers de comida rescatada en el local de Pan Bendito"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="aspect-video relative overflow-hidden">
+                    <Image
+                      src="/images/pan-bendito-reparto.jpg"
+                      alt="Tuppers con comida rescatada preparados con el nombre de cada familia en el local de Pan Bendito"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="aspect-video relative overflow-hidden">
+                    <Image
+                      src="/images/pan-bendito-preparacion.jpg"
+                      alt="Voluntarias organizando los tuppers de comida antes del reparto a las familias"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Nuestros colaboradores */}
+              <div className="mt-12">
+                <h3 className="text-foreground mb-6">Nuestros colaboradores</h3>
+                <p className="text-foreground/70 mb-8 normal-case">
+                  Gracias a los colegios y entidades del barrio que donan cada semana la comida 
+                  que les sobra, el núcleo de Pan Bendito puede llegar a más familias. Estos son 
+                  los colaboradores que hacen posible nuestro día a día.
+                </p>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {donors.map((donor) => (
+                    <div key={donor.name} className="bg-muted p-4 text-center">
+                      <span className="font-semibold text-foreground text-sm normal-case">{donor.name}</span>
+                      <span className="label-text text-primary block mt-1">{donor.type}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
