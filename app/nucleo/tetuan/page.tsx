@@ -180,8 +180,8 @@ export default function NucleoTetuanPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="aspect-video relative overflow-hidden">
                     <Image
-                      src="/images/tetuan-dia-1.jpg"
-                      alt="Voluntarios en el local de Tetuán"
+                      src="/images/tetuan-local.jpg"
+                      alt="Voluntarios preparando el reparto en el local de Tetuán, con cajas de fruta y verdura rescatada"
                       fill
                       className="object-cover"
                     />

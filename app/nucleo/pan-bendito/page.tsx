@@ -38,15 +38,15 @@ export default function NucleoPanBenditoPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>
-              <span className="stat-number text-3xl text-primary">4</span>
-              <span className="block text-background/70 text-sm mt-1 normal-case">Comercios colaboradores</span>
+              <span className="stat-number text-3xl text-primary">6</span>
+              <span className="block text-background/70 text-sm mt-1 normal-case">Rutas de rescate</span>
             </div>
             <div>
-              <span className="stat-number text-3xl text-primary">16</span>
-              <span className="block text-background/70 text-sm mt-1 normal-case">Familias beneficiarias</span>
+              <span className="stat-number text-3xl text-primary">20</span>
+              <span className="block text-background/70 text-sm mt-1 normal-case">Familias (unas 60 personas)</span>
             </div>
             <div>
-              <span className="stat-number text-3xl text-primary">28</span>
+              <span className="stat-number text-3xl text-primary">25</span>
               <span className="block text-background/70 text-sm mt-1 normal-case">Voluntarios activos</span>
             </div>
           </div>
@@ -63,49 +63,82 @@ export default function NucleoPanBenditoPage() {
               
               <div className="prose prose-lg max-w-none">
                 <p className="text-foreground/70 mb-6 normal-case text-lg">
-                  Pan Bendito es un barrio del distrito de Carabanchel, en el sur de Madrid. 
-                  Un barrio obrero con una fuerte identidad vecinal y una larga tradición de 
-                  solidaridad y organización comunitaria.
+                  Pan Bendito es un barrio del distrito de Carabanchel, en el sur de Madrid, 
+                  con una fuerte identidad vecinal y una larga tradición de solidaridad y 
+                  organización comunitaria.
                 </p>
 
                 <div className="my-8 p-6 bg-primary/10 border-l-4 border-primary">
                   <p className="text-foreground font-semibold normal-case mb-0">
-                    En 2022, tras consolidar las operaciones en Tetuán, ReFood España decidió 
-                    dar el salto y abrir un segundo núcleo. Pan Bendito fue el lugar elegido 
-                    por su tejido asociativo y la necesidad detectada en el barrio.
+                    Todo empezó cuando <strong>Teresa</strong>, profesora de la Universidad 
+                    Complutense de Madrid, se puso en contacto con ReFood España. Junto a otros 
+                    vecinos y vecinas activos del barrio y del mundo del asociacionismo, montaron 
+                    Refood Pan Bendito en septiembre de 2022.
                   </p>
                 </div>
 
                 <p className="text-foreground/70 mb-6 normal-case">
-                  El núcleo de Pan Bendito nació con la experiencia acumulada de Tetuán. 
-                  Los voluntarios pioneros del primer núcleo acompañaron el proceso de apertura, 
-                  compartiendo aprendizajes y ayudando a formar al nuevo equipo.
+                  ReFood trabaja de forma microlocal: los procedimientos están estandarizados 
+                  y cada núcleo es totalmente autónomo bajo el paraguas de ReFood España. Así 
+                  nació Pan Bendito, el segundo núcleo en España tras Tetuán.
+                </p>
+
+                <h3 className="text-foreground mb-4 mt-8">Los primeros pasos</h3>
+
+                <p className="text-foreground/70 mb-6 normal-case">
+                  El centro de mayores <strong>La Rosaleda</strong> se ofreció a colaborar desde 
+                  el primer momento como donante. Se buscó un local para el reparto, se fijaron 
+                  los martes como día de actividad y se impartieron cursos de manipulación de 
+                  alimentos a todas las personas participantes.
                 </p>
 
                 <p className="text-foreground/70 mb-6 normal-case">
-                  Hoy, el núcleo de Pan Bendito opera de forma autónoma, con su propio equipo 
-                  de voluntarios y sus propios comercios colaboradores. Aunque más pequeño que 
-                  Tetuán, demuestra que el modelo ReFood es replicable y escalable.
-                </p>
-
-                <h3 className="text-foreground mb-4 mt-8">El barrio de Pan Bendito</h3>
-
-                <p className="text-foreground/70 mb-6 normal-case">
-                  Pan Bendito forma parte del distrito de Carabanchel, uno de los más poblados 
-                  de Madrid. Es un barrio con una mezcla de población tradicional y nuevos 
-                  vecinos, con una fuerte presencia de familias trabajadoras.
+                  Desde el principio se tomó una decisión clave: involucrar a las familias 
+                  receptoras como parte activa del proyecto, tanto en la recogida de las 
+                  donaciones como en el reparto en el local. Hasta diciembre de 2022 se 
+                  realizó un periodo de prueba con personas de confianza.
                 </p>
 
                 <p className="text-foreground/70 mb-6 normal-case">
-                  El barrio cuenta con un activo tejido asociativo: asociaciones vecinales, 
-                  grupos culturales, iniciativas solidarias... ReFood se integra en esta red, 
-                  colaborando con otras entidades para maximizar el impacto.
+                  A principios de 2023 la evaluación fue muy satisfactoria: las familias 
+                  valoraban especialmente sentirse integradas, como &ldquo;una gran familia&rdquo;. 
+                  Se decidió abrir el proyecto al resto del barrio y se sumaron nuevos donantes 
+                  como el Colegio Vedruna Carabanchel, la Panadería &ldquo;Madre mía&rdquo;, el 
+                  catering El Sitio de tu Recreo, el Colegio Santa Beatriz de Silva y el 
+                  Colegio Escolapias Carabanchel.
                 </p>
+              </div>
 
-                <p className="text-foreground/70 mb-6 normal-case">
-                  La idiosincrasia del barrio, su carácter acogedor y su tradición de 
-                  solidaridad entre vecinos, han sido fundamentales para el éxito del núcleo. 
-                  Aquí, como en Tetuán, la comunidad es el verdadero motor del proyecto.
+              {/* How it works */}
+              <div className="mt-12">
+                <h3 className="text-foreground mb-6">¿Cómo funcionamos?</h3>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  <div className="p-6 bg-muted">
+                    <span className="label-text text-primary block mb-2">1. Rescate</span>
+                    <p className="text-foreground/70 text-sm normal-case mb-0">
+                      Martes y jueves de 15:00 a 16:00, seis rutas recogen la comida sobrante de 
+                      colegios y centros de mayores. Se registra procedencia, tipo, cantidad y 
+                      alérgenos, y se mantiene refrigerada o congelada.
+                    </p>
+                  </div>
+                  <div className="p-6 bg-muted">
+                    <span className="label-text text-primary block mb-2">2. Local</span>
+                    <p className="text-foreground/70 text-sm normal-case mb-0">
+                      Los martes de 18:30 a 20:00 un equipo de 9 a 11 personas redistribuye la 
+                      comida rescatada entre las familias y registra su trazabilidad.
+                    </p>
+                  </div>
+                  <div className="p-6 bg-muted">
+                    <span className="label-text text-primary block mb-2">3. Recogida</span>
+                    <p className="text-foreground/70 text-sm normal-case mb-0">
+                      Las familias traen los tuppers limpios de la semana anterior y se llevan 
+                      los nuevos con comida a casa.
+                    </p>
+                  </div>
+                </div>
+                <p className="text-foreground/70 mt-6 normal-case">
+                  Donantes actuales: Colegio Escolapias, Colegio Santa Beatriz de Silva, 
+                  Colegio Vedruna Carabanchel, Centro de Mayores La Rosaleda y Colegio Salesianos.
                 </p>
               </div>
 
@@ -113,9 +146,9 @@ export default function NucleoPanBenditoPage() {
               <div className="mt-12 p-8 bg-foreground text-background">
                 <h3 className="text-primary mb-4">Un núcleo en crecimiento</h3>
                 <p className="text-background/80 normal-case mb-6">
-                  Pan Bendito es todavía un núcleo joven, pero con un enorme potencial de 
-                  crecimiento. Estamos trabajando para ampliar la red de comercios colaboradores 
-                  y llegar a más familias del barrio.
+                  Hoy rescatamos entre 80 y 100 kg de alimentos cada semana. Nuestros retos: 
+                  sumar donantes de fruta y verdura fresca, lograr una financiación estable y 
+                  llegar a más familias y personas voluntarias del barrio.
                 </p>
                 <p className="text-background/80 normal-case mb-0">
                   Si vives o trabajas en Pan Bendito, Carabanchel o alrededores, te invitamos 
@@ -129,8 +162,8 @@ export default function NucleoPanBenditoPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="aspect-video relative overflow-hidden">
                     <Image
-                      src="/images/nucleo-pan-bendito.jpg"
-                      alt="Voluntarios en Pan Bendito"
+                      src="/images/pan-bendito-reparto.jpg"
+                      alt="Tuppers con comida rescatada preparados con el nombre de cada familia en el local de Pan Bendito"
                       fill
                       className="object-cover"
                     />
@@ -156,7 +189,7 @@ export default function NucleoPanBenditoPage() {
                     </div>
                     <div className="flex-1 p-4 bg-muted">
                       <p className="text-foreground/70 normal-case mb-0">
-                        Apertura del núcleo de Pan Bendito, el segundo de ReFood España
+                        Septiembre: nace Refood Pan Bendito. Periodo de prueba hasta diciembre
                       </p>
                     </div>
                   </div>
@@ -166,17 +199,19 @@ export default function NucleoPanBenditoPage() {
                     </div>
                     <div className="flex-1 p-4 bg-muted">
                       <p className="text-foreground/70 normal-case mb-0">
-                        Consolidación del equipo de voluntarios y primeros comercios estables
+                        Apertura al barrio y nuevos donantes. Primer curso: más de 1.000 kg 
+                        rescatados y 15 familias (50 personas) atendidas
                       </p>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <div className="w-20 shrink-0">
-                      <span className="stat-number text-xl">2024</span>
+                      <span className="stat-number text-xl">2026</span>
                     </div>
                     <div className="flex-1 p-4 bg-muted">
                       <p className="text-foreground/70 normal-case mb-0">
-                        Crecimiento sostenido: más familias atendidas, más voluntarios activos
+                        Curso 2025-2026: 1.340 kg rescatados, más de 20 familias (unas 60 
+                        personas) y 25 personas voluntarias
                       </p>
                     </div>
                   </div>
@@ -207,7 +242,8 @@ export default function NucleoPanBenditoPage() {
                     <div>
                       <span className="font-bold text-foreground block">Horario de operaciones</span>
                       <span className="text-foreground/70 text-sm normal-case">
-                        Tardes (horario variable)
+                        Rescate: 15:00 - 16:00<br />
+                        Reparto: 18:30 - 20:00
                       </span>
                     </div>
                   </div>
@@ -217,7 +253,8 @@ export default function NucleoPanBenditoPage() {
                     <div>
                       <span className="font-bold text-foreground block">Días de operación</span>
                       <span className="text-foreground/70 text-sm normal-case">
-                        2 días por semana
+                        Rescate martes y jueves<br />
+                        Reparto los martes
                       </span>
                     </div>
                   </div>
