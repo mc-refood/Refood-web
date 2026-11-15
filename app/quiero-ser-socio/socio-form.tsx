@@ -3,6 +3,7 @@
 import { useActionState } from "react"
 import { submitSocioForm, type SocioFormState } from "./actions"
 import { FormSuccess } from "@/components/form-success"
+import { PrivacyNotice } from "@/components/privacy-notice"
 
 const initialState: SocioFormState = { status: "idle" }
 
@@ -142,6 +143,8 @@ export function SocioForm() {
             mi condición de socio/a de ReFood España.
           </label>
         </div>
+
+        <PrivacyNotice />
 
         <button type="submit" disabled={isPending} className="btn-refood w-full justify-center disabled:opacity-60">
           {isPending ? "Enviando..." : "Darme de alta como socio/a"}

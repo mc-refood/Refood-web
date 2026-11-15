@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, Mail, Users, Calendar, Heart, CheckCircle } from "lucide-react"
+import { ArrowLeft, Mail, Heart, CheckCircle } from "lucide-react"
 import { SocioForm } from "./socio-form"
 export default function QuieroSerSocioPage() {
   return (
@@ -23,7 +23,7 @@ export default function QuieroSerSocioPage() {
           </h1>
           <p className="text-xl text-foreground/80 max-w-2xl normal-case">
             Mantente conectado con la comunidad ReFood como miembro asociado. Recibe 
-            información actualizada y participa en las decisiones del proyecto.
+            información actualizada y apoya el proyecto de forma continuada.
           </p>
         </div>
       </section>
@@ -53,20 +53,6 @@ export default function QuieroSerSocioPage() {
                   <div>
                     <span className="font-bold text-foreground block">Newsletter</span>
                     <span className="text-foreground/70 normal-case">Noticias, comunicaciones y eventos</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-muted">
-                  <Users className="h-6 w-6 text-primary shrink-0" />
-                  <div>
-                    <span className="font-bold text-foreground block">Participación</span>
-                    <span className="text-foreground/70 normal-case">Voz y voto en las decisiones del proyecto</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-muted">
-                  <Calendar className="h-6 w-6 text-primary shrink-0" />
-                  <div>
-                    <span className="font-bold text-foreground block">Asamblea anual</span>
-                    <span className="text-foreground/70 normal-case">Acceso a la asamblea general de socios</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-4 bg-muted">

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Instagram, Facebook, Linkedin, MessageCircle, CheckCircle2 } from "lucide-react"
 import { submitContactForm, type ContactFormState } from "@/components/contact-actions"
+import { PrivacyNotice } from "@/components/privacy-notice"
 
 const initialState: ContactFormState = { status: "idle" }
 
@@ -111,7 +112,8 @@ export function Contact() {
                     </label>
                     <Textarea id="message" name="message" rows={5} required className="w-full" />
                   </div>
-                  <Button type="submit" disabled={isPending} className="w-full btn-refood">
+                  <PrivacyNotice />
+              <Button type="submit" disabled={isPending} className="w-full btn-refood">
                     {isPending ? "Enviando..." : "Enviar mensaje"}
                   </Button>
                 </form>

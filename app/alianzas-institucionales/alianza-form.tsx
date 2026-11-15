@@ -4,6 +4,7 @@ import { useActionState } from "react"
 import { Handshake } from "lucide-react"
 import { submitAlianzaForm, type AlianzaFormState } from "./actions"
 import { FormSuccess } from "@/components/form-success"
+import { PrivacyNotice } from "@/components/privacy-notice"
 
 const initialState: AlianzaFormState = { status: "idle" }
 
@@ -146,6 +147,8 @@ export function AlianzaForm() {
             placeholder="Describe brevemente la colaboración que tienes en mente"
           />
         </div>
+
+        <PrivacyNotice />
 
         <button type="submit" disabled={isPending} className="btn-refood w-full justify-center disabled:opacity-60">
           {isPending ? "Enviando..." : "Enviar propuesta"}

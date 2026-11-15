@@ -3,6 +3,7 @@
 import { useActionState } from "react"
 import { Calendar, Mail, MessageCircle, CheckCircle2 } from "lucide-react"
 import { submitRouteForm, type RouteFormState } from "./actions"
+import { PrivacyNotice } from "@/components/privacy-notice"
 
 const initialState: RouteFormState = { status: "idle" }
 
@@ -165,6 +166,8 @@ export function RouteForm() {
             placeholder="¿Por qué quieres unirte? ¿Tienes alguna experiencia previa?"
           />
         </div>
+
+        <PrivacyNotice />
 
         <button type="submit" disabled={isPending} className="btn-refood w-full justify-center disabled:opacity-60">
           {isPending ? "Enviando..." : "Enviar solicitud"}

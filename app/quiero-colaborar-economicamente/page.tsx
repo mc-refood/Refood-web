@@ -1,6 +1,27 @@
 import Link from "next/link"
-import { ArrowLeft, Heart, CreditCard, Building, CheckCircle } from "lucide-react"
-import { DonacionForm } from "./donacion-form"
+import { ArrowLeft, Heart, Smartphone, Building, CheckCircle, Star } from "lucide-react"
+
+const destinos = [
+  "Alquiler y mantenimiento del local",
+  "Carritos de transporte y bolsas reutilizables",
+  "Tuppers y envases para las familias",
+  "Suministros (luz, agua, limpieza)",
+  "Formación de voluntarios",
+  "Expansión a nuevos barrios",
+]
+
+function ConceptoNucleo({ ejemplo }: { ejemplo: string }) {
+  return (
+    <div className="mt-4 border-2 border-dashed border-primary bg-background p-3 text-sm normal-case">
+      <span className="font-bold text-foreground block mb-1">Concepto: indica el núcleo</span>
+      <span className="text-foreground/70">
+        Escribe el núcleo al que va tu donación (<strong>Tetuán</strong> o <strong>Pan Bendito</strong>).
+        Ejemplo: <span className="font-mono text-foreground">{ejemplo}</span>
+      </span>
+    </div>
+  )
+}
+
 export default function QuieroColaborarEconomicamentePage() {
   return (
     <main className="min-h-screen bg-background">
@@ -50,84 +71,91 @@ export default function QuieroColaborarEconomicamentePage() {
 
               <h3 className="text-foreground mb-4 text-xl normal-case">Tu donación se destina a</h3>
               <ul className="space-y-3 text-foreground/70 normal-case mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  Alquiler y mantenimiento del local
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  Carritos de transporte y bolsas reutilizables
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  Tuppers y envases para las familias
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  Suministros (luz, agua, limpieza)
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  Formación de voluntarios
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  Expansión a nuevos barrios
-                </li>
+                {destinos.map((destino) => (
+                  <li key={destino} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    {destino}
+                  </li>
+                ))}
               </ul>
 
-              <div className="p-6 bg-primary/10 border-2 border-primary mb-8">
+              <div className="p-6 bg-primary/10 border-2 border-primary">
                 <Heart className="h-8 w-8 text-primary mb-4" />
                 <h4 className="text-foreground font-bold mb-2">Desgravación fiscal</h4>
                 <p className="text-foreground/70 text-sm normal-case">
                   ReFood España es una asociación declarada de <strong>Utilidad Pública en 2024</strong>. Tus donaciones 
                   pueden desgravar hasta un 80% en el IRPF (los primeros 250 euros) y un 40% 
-                  del resto (45% a partir del tercer año de donación continuada). Para solicitar tu certificado de donación, escríbenos a{" "}
-                  <a href="mailto:financiacion@refoodesp.org" className="text-primary underline font-medium">
-                    financiacion@refoodesp.org
-                  </a>.
-                </p>
-              </div>
-
-              <h3 className="text-foreground mb-4 text-xl normal-case">Datos bancarios</h3>
-              <div className="space-y-4">
-                <div className="p-4 bg-muted">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Building className="h-5 w-5 text-primary" />
-                    <span className="font-bold text-foreground">Transferencia bancaria</span>
-                  </div>
-                  <p className="text-foreground/70 text-sm normal-case font-mono">
-                    IBAN: ES86 0049 6976 2524 1003 8471<br />
-                    Titular: Refood España<br />
-                    Concepto: Donación + tu nombre
-                  </p>
-                </div>
-                <div className="p-4 bg-muted">
-                  <div className="flex items-center gap-3 mb-2">
-                    <CreditCard className="h-5 w-5 text-primary" />
-                    <span className="font-bold text-foreground">Bizum (Donar a ONG)</span>
-                  </div>
-                  <p className="text-foreground/70 text-sm normal-case mb-2">
-                    Código ONG: <strong>11800</strong> (ReFood España)
-                  </p>
-                  <ol className="text-foreground/70 text-xs normal-case list-decimal pl-4 space-y-1">
-                    <li>Abre Bizum en tu banco y selecciona <strong>Donar a ONG</strong>.</li>
-                    <li>Introduce el código <strong>11800</strong> o busca ReFood España.</li>
-                    <li>Elige el importe y confirma tu donación.</li>
-                  </ol>
-                </div>
-                <p className="text-foreground/70 text-sm normal-case pt-2">
-                  ¿Dudas sobre donaciones, empresas o certificados fiscales? Escríbenos a{" "}
-                  <a href="mailto:financiacion@refoodesp.org" className="text-primary underline font-medium">
-                    financiacion@refoodesp.org
-                  </a>.
+                  del resto (45% a partir del tercer año de donación continuada).
                 </p>
               </div>
             </div>
 
-            {/* Form Column */}
+            {/* Ways to donate */}
             <div>
-              <DonacionForm />
+              <h2 className="text-foreground mb-6 text-2xl">Cómo donar</h2>
+
+              <div className="space-y-6">
+                <article className="relative p-6 bg-muted border-2 border-primary">
+                  <span className="absolute -top-3 left-6 inline-flex items-center gap-1 bg-primary px-2 py-0.5 text-xs font-bold uppercase text-foreground">
+                    <Star className="h-3 w-3" aria-hidden="true" />
+                    Opción recomendada
+                  </span>
+                  <div className="flex items-center gap-3 mb-3">
+                    <Smartphone className="h-6 w-6 text-primary" />
+                    <h3 className="text-foreground text-xl normal-case">1. Bizum (Donar a ONG)</h3>
+                  </div>
+                  <p className="text-foreground/70 text-sm normal-case mb-4">
+                    Es la forma más sencilla. Al donar por Bizum, tu banco nos comunica tus datos
+                    fiscales, así que tu donación queda registrada para la desgravación sin que
+                    tengas que enviarnos nada más.
+                  </p>
+                  <p className="text-foreground text-sm normal-case mb-3">
+                    Código ONG: <strong className="font-mono text-base">11800</strong> (ReFood España)
+                  </p>
+                  <ol className="text-foreground/70 text-sm normal-case list-decimal pl-5 space-y-1">
+                    <li>Abre Bizum en tu banco y selecciona <strong>Donar a ONG</strong>.</li>
+                    <li>Introduce el código <strong>11800</strong> o busca ReFood España.</li>
+                    <li>Elige el importe y escribe el núcleo en el concepto.</li>
+                    <li>Confirma tu donación.</li>
+                  </ol>
+                  <ConceptoNucleo ejemplo="Pan Bendito" />
+                </article>
+
+                <article className="p-6 bg-muted">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Building className="h-6 w-6 text-primary" />
+                    <h3 className="text-foreground text-xl normal-case">2. Transferencia bancaria</h3>
+                  </div>
+                  <p className="text-foreground/70 text-sm normal-case mb-4">
+                    Si prefieres hacer una transferencia, usa estos datos:
+                  </p>
+                  <dl className="text-sm normal-case font-mono space-y-1 text-foreground">
+                    <div>
+                      <dt className="inline text-foreground/60">IBAN: </dt>
+                      <dd className="inline">ES86 0049 6976 2524 1003 8471</dd>
+                    </div>
+                    <div>
+                      <dt className="inline text-foreground/60">Titular: </dt>
+                      <dd className="inline">Refood España</dd>
+                    </div>
+                  </dl>
+                  <ConceptoNucleo ejemplo="Donación Tetuán - Ana García" />
+                  <p className="text-foreground/70 text-sm normal-case mt-4">
+                    Para que tu transferencia desgrave, escríbenos a{" "}
+                    <a href="mailto:financiacion@refoodesp.org" className="text-primary underline font-medium">
+                      financiacion@refoodesp.org
+                    </a>{" "}
+                    con tu nombre completo y DNI.
+                  </p>
+                </article>
+
+                <p className="text-foreground/70 text-sm normal-case">
+                  ¿Dudas sobre donaciones o empresas? Escríbenos a{" "}
+                  <a href="mailto:financiacion@refoodesp.org" className="text-primary underline font-medium">
+                    financiacion@refoodesp.org
+                  </a>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
